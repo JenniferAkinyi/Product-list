@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Product List</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Desserts</h1>
+    <section>
+      <div class="product-display" id="product-display">
+
+      </div>
+      <div class="cart-display">
+        <h2>Your Cart (<span id="cart-count">0</span>)</h2>
+        <div id="empty-cart" style="display: none;">
+          <img src="./assets/images/illustration-empty-cart.svg" alt="Empty Cart">
+          <p>Your added items will appear here</p>
+        </div>
+        <ul class="cart-items">
+          <!-- cart items go here -->
+        </ul>
+        <div class="cart-total">
+          <p>Order Total</p>
+          <h3 id="total-price">$0.00</h3>
+        </div>
+        <button class="confirm-order-btn">Confirm Order</button>
+      </div>
+    </section>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>
