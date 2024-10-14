@@ -22,9 +22,11 @@ const fetchData = async () => {
                     <img src="./assets/images/icon-add-to-cart.svg" alt="Add to cart">
                     <p>Add to Cart</p>
                 </button>
-                <p>${product.category}</p>
-                <h4>${product.name}</h4>
-                <h5>$${product.price.toFixed(2)}</h5>
+                <div class="product-info">
+                    <p>${product.category}</p>
+                    <h4>${product.name}</h4>
+                    <h5>$${product.price.toFixed(2)}</h5>
+                </div>
             </div>
         `;
         });
@@ -36,7 +38,7 @@ const fetchData = async () => {
 };
 
 const handleAddToCart = (e) => {
-    const cartBtn = e.target.closest('.add-to-cart-btn');  // Ensure the correct button is selected
+    const cartBtn = e.target.closest('.add-to-cart-btn');  
     if (!cartBtn) return;  // Guard clause to prevent errors
 
     const productId = cartBtn.dataset.id;  // Get the product ID from the button's dataset
@@ -63,7 +65,7 @@ const updateQuantity = (e) => {
     const target = e.target;
     const quantityControl = target.closest('.quantity-control');
 
-    if (!quantityControl) return;  // Return if the clicked target is not part of the quantity control
+    if (!quantityControl) return; 
 
     const productId = quantityControl.dataset.id;
     const quantityValueElement = quantityControl.querySelector('.quantity-value');
@@ -90,5 +92,7 @@ productDisplay.addEventListener('click', (e) => {
     }
 });
 
-// Fetch products and initialize page
+// working on the cart 
+
+
 fetchData();
